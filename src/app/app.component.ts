@@ -2,14 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ElectronService } from './core/services';
 import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../environments/environment';
-window
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
+
   constructor(
     private electronService: ElectronService,
     private translate: TranslateService
@@ -28,6 +31,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.electronService.ipcRenderer.invoke('app:loaded');  
+    //this.electronService.ipcRenderer.invoke('app:loaded');  
   }
 }

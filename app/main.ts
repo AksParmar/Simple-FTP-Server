@@ -14,6 +14,7 @@ function createWindow(): BrowserWindow {
   win = new BrowserWindow({
     x: 0,
     y: 0,
+    title: "Simple FTP Server",
     width: size.width,
     height: size.height,
     webPreferences: {
